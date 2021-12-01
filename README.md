@@ -18,4 +18,5 @@
 
 
 ## Improvements
-* TBA
+* add validation if necessary. express-validator can be useful
+* swagger-ui-express to provide UI showing the details of APIs
