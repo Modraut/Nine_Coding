@@ -13,7 +13,6 @@ app.use('*', function (req, res, next) {
   next();
 });
 
-
 app.post('/', (req, res) => {
   return res.status(200).send("Connected")
 },
