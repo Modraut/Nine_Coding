@@ -1,9 +1,15 @@
 const express = require("express")
 require('dotenv').config()
 const showRouter = require('./routes/show');
+const errorHandler = require('./helpers')
 
 const app = express()
 app.use(express.json())
+
+// handle bad request error
+app.use((err, req, res, next) => {
+  errorHandler(err, res)
+})
 
 // As the request will be from a different origin
 app.use('*', function (req, res, next) {
